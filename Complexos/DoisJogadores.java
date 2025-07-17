@@ -23,7 +23,10 @@ public class DoisJogadores {
     int valorApostado;
 
     public DoisJogadores(/* Jogador 1*/ int j1_100, int j1_50, int j1_25, int j1_10, int j1_5,
-    /* Jogador 2*/ int j2_100, int j2_50, int j2_25, int j2_10, int j2_5 /* Valor Apostado */){
+    /* Jogador 2*/ int j2_100, int j2_50, int j2_25, int j2_10, int j2_5,
+    /* Valor Apostado */ int valorApostado){
+
+        this.valorApostado = valorApostado;
 
         this.j1_100 = j1_100;
         this.j1_50 = j1_50;
@@ -79,21 +82,23 @@ public class DoisJogadores {
 
             public void exibirInfo(){
 
-            if (jogador1 = true) {
+                if (jogador1 == true) {
 
-                valorGanho = (somaj1 * valorApostado) / 3800;
-                System.out.println("O Jogador 1 teve um ganho de R$"+ valorGanho);
-                System.out.println("Totalizando R$"+ valorApostado + valorGanho);
+                    valorGanho = (somaj1 * valorApostado) / 3800;
 
-            }
+                    System.out.println("O Jogador 1 teve um ganho de R$"+ (valorGanho - valorApostado));
+                    System.out.println("Totalizando R$"+ valorGanho);
 
-            else if (jogador2 = true) {
+                }
 
-                valorGanho = (somaj2 * valorApostado) / 3800;
-                System.out.println("O Jogador 2 teve um ganho de R$"+ valorGanho);
-                System.out.println("Totalizando R$"+ valorApostado + valorGanho);
+                else if (jogador2 == true) {
 
-            }
+                    valorGanho = (somaj2 * valorApostado) / 3800;
+                    
+                    System.out.println("O Jogador 2 teve um ganho de R$"+ (valorGanho - valorApostado));
+                    System.out.println("Totalizando R$"+ valorGanho);
+
+                }
 
         }
     
