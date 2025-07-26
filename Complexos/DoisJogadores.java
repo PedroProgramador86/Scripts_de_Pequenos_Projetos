@@ -4,27 +4,27 @@ public class DoisJogadores {
 
     // J1
     boolean jogador1 = false;
-    int somaj1;
-    int j1_100;
-    int j1_50;
-    int j1_25;
-    int j1_10;
-    int j1_5;
+    float somaj1;
+    float j1_100;
+    float j1_50;
+    float j1_25;
+    float j1_10;
+    float j1_5;
     // J2
     boolean jogador2 = false;
-    int somaj2;
-    int j2_100;
-    int j2_50;
-    int j2_25;
-    int j2_10;
-    int j2_5;
+    float somaj2;
+    float j2_100;
+    float j2_50;
+    float j2_25;
+    float j2_10;
+    float j2_5;
 
-    int valorGanho;
-    int valorApostado;
+    float valorGanho;
+    float valorApostado;
 
-    public DoisJogadores(/* Jogador 1*/ int j1_100, int j1_50, int j1_25, int j1_10, int j1_5,
-    /* Jogador 2*/ int j2_100, int j2_50, int j2_25, int j2_10, int j2_5,
-    /* Valor Apostado */ int valorApostado){
+    public DoisJogadores(/* Jogador 1*/ float j1_100, float j1_50, float j1_25, float j1_10, float j1_5,
+    /* Jogador 2*/ float j2_100, float j2_50, float j2_25, float j2_10, float j2_5,
+    /* Valor Apostado */ float valorApostado){
 
         this.valorApostado = valorApostado;
 
@@ -86,17 +86,33 @@ public class DoisJogadores {
 
                     valorGanho = (somaj1 * valorApostado) / 3800;
 
-                    System.out.println("O Jogador 1 teve um ganho de R$"+ (valorGanho - valorApostado));
-                    System.out.println("Totalizando R$"+ valorGanho);
+                    System.out.println("============== Valor apostado: R$%.2f =============="+ valorApostado);
+                    System.out.println("O Jogador 1 se sobressaiu ganhando !");
+                    System.out.printf("Houve um ganho de R$%.2f sobre o jogador 2\n", valorGanho - valorApostado);
+                    System.out.printf("Saldo Total: R$%.2f\n\n", valorGanho);
+
+                    System.out.println("==================== R E S U M O: ==================");
+                    System.out.printf("Jogador 1: +R$%.2f\n", valorGanho - valorApostado);
+                    System.out.printf("Saldo Total: R$%.2f\n", valorApostado + (valorGanho - valorApostado));
+                    System.out.printf("Jogador 2: -R$%.2f\n", valorGanho - valorApostado);
+                    System.out.printf("Saldo Total: R$%.2f\n\n", valorApostado - (valorGanho - valorApostado));
 
                 }
 
                 else if (jogador2 == true) {
 
                     valorGanho = (somaj2 * valorApostado) / 3800;
-                    
-                    System.out.println("O Jogador 2 teve um ganho de R$"+ (valorGanho - valorApostado));
-                    System.out.println("Totalizando R$"+ valorGanho);
+     
+                    System.out.println("============== Valor apostado: R$%.2f =============="+ valorApostado);
+                    System.out.println("O Jogador 2 se sobressaiu ganhando !");
+                    System.out.printf("Houve um ganho de R$%.2f sobre o jogador 1\n", valorGanho - valorApostado);
+                    System.out.printf("Saldo Total: R$%.2f\n\n", valorGanho);
+
+                    System.out.println("==================== R E S U M O: ==================");
+                    System.out.printf("Jogador 1: -R$%.2f\n", valorGanho - valorApostado);
+                    System.out.printf("Saldo Total: R$%.2f\n", valorApostado - (valorGanho - valorApostado));
+                    System.out.printf("Jogador 2: +R$%.2f\n", valorGanho - valorApostado);
+                    System.out.printf("Saldo Total: R$%.2f\n\n", valorApostado + (valorGanho - valorApostado));
 
                 }
 
